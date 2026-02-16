@@ -1,19 +1,16 @@
 <div class="conversion-class">
 
-    <form class="conversion-form">
-            
+    <form class="conversion-form">           
             <div class="form-input-bind">
-                <div class="from-to from-to-dropdown">
-                     <button class="drop-list-btn"> 
+                <div [class] = "drop_down_status">
+                     <button class="drop-list-btn" (click) = "selectCurrency($event)"> 
                         {{ selected_country_from }} 
                     <img [src]="dropdown_icon" alt="dropdown_icon">
-                    <div [class] = "drop-downstatus">
-
-                    </div>
                     </button>
-                </div>
-                <div class="from-to">
-                     <button class="drop-list-btn"> {{ selected_country_to }}  </button>
+                    <div [class] ="code_list_status">
+                        <input type="text" maxlength="3" placeholder="-- currency code --"/>
+                         <button class="drop-list-btn"> USD  </button>
+                    </div>
                 </div>
             </div>
     </form>

@@ -1,0 +1,17 @@
+.code-list-inactive{
+    display: none;
+}
+
+.code-list-active{
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.drop-list-btn{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 3px;
+    align-items: center;
+}

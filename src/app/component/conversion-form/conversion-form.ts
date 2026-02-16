@@ -13,11 +13,19 @@ export class ConversionForm {
   dropdown_icon : string = '/icons/dropdown_icon.svg';
   selected_country_from : string = '--From--';
   selected_country_to : string = '--to--';
+  drop_down_status : string = "false";
+  code_list_status : string = "code-list-inactive";
   country_code_items: CountryCode[] = country_json as CountryCode[];
-  ngOnInit() : void{
-    for(var item of this.country_code_items){
-      console.log(`{item.country} : {item.currency_code}`);
-    }
-    
+  
+  selectCurrency(event : Event): void {
+    event.preventDefault();
+  if (this.code_list_status === "code-list-inactive") {
+    this.code_list_status = "code-list-active";
+  } else {
+    this.code_list_status = "code-list-inactive";
   }
+}
+
+
+  
 }
