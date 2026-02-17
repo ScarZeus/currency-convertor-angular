@@ -2,10 +2,20 @@
     display: none;
 }
 
-.code-list-active{
-    display: grid;
-    grid-template-columns: 1fr;
+.code-list-active {
+    display: flex;
+    padding-top: 3px ;
+    flex-direction: column;
+    gap: 0.2em  ;
+    align-items: flex-end;  
+    width: 70px;
+}
 
+
+.code-list-active > * {
+    width: 50px;
+    border: transparent;
+    text-align: center;
 }
 
 .drop-list-btn{
@@ -15,3 +25,4 @@
     gap: 3px;
     align-items: center;
 }
+
