@@ -1,19 +1,64 @@
 <div class="conversion-class">
 
-    <form class="conversion-form">           
-            <div class="form-input-bind">
-                <div [class] = "drop_down_status">
-                     <button class="drop-list-btn" (click) = "selectCurrency($event)"> 
-                        {{ selected_country_from }} 
-                    <img [src]="dropdown_icon" alt="dropdown_icon">
-                    </button>
-                    <div [class] ="code_list_status">
-                         <input type="text" maxlength="3" placeholder="code"/>
+  <form class="conversion-form">
 
-                         <button>USD</button>
-                    </div>
-                </div>
-            </div>
-    </form>
+    <div class="conversion-buttons">
+
+      <div class="form-input-bind">
+
+        <div class="drop-down-status">
+
+          <button class="drop-list-btn" (click)="selectCurrencyFrom($event)">
+            {{ selected_country_from }}
+            <img [src]="dropdown_icon" alt="dropdown_icon">
+          </button>
+
+          <div
+            class="code-list"
+            *ngIf="isFromOpen"
+          >
+            <input type="text" maxlength="3" placeholder="code" />
+
+            <button
+              *ngFor="let item of country_code_items"
+              (click)="chooseFrom(item.currency_code)"
+            >
+              {{ item.currency_code }}
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="drop-down-status">
+
+          <button class="drop-list-btn" (click)="selectCurrencyTo($event)">
+            {{ selected_country_to }}
+            <img [src]="dropdown_icon" alt="dropdown_icon">
+          </button>
+
+          <div
+            class="code-list"
+            *ngIf="isToOpen"
+          >
+            <input type="text" maxlength="3" placeholder="code" />
+
+            <button
+              *ngFor="let item of country_code_items"
+              (click)="chooseTo(item.currency_code)"
+            >
+              {{ item.currency_code }}
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </form>
 
 </div>

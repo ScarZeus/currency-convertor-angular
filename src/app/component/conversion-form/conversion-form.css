@@ -2,7 +2,7 @@
     display: none;
 }
 
-.code-list-active {
+.code-list {
     display: flex;
     padding-top: 3px ;
     flex-direction: column;
@@ -12,7 +12,7 @@
 }
 
 
-.code-list-active > * {
+.code-list > * {
     width: 50px;
     border: transparent;
     text-align: center;
@@ -26,3 +26,10 @@
     align-items: center;
 }
 
+.conversion-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical alignment */
+}
