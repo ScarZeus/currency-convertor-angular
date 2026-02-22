@@ -3,12 +3,15 @@
 }
 
 .code-list {
+    position: absolute;
     display: flex;
+    background-color: aliceblue;
     padding-top: 3px ;
     flex-direction: column;
     gap: 0.2em  ;
     align-items: flex-end;  
     width: 70px;
+    z-index: 999;
 }
 
 
@@ -23,13 +26,24 @@
     justify-content: space-between;
     flex-direction: row;
     gap: 3px;
+    background : red;
+    border-radius: 10px 10px 10px 10px ;
+    width: fit-content;
     align-items: center;
+}
+.drop-list-btn > *{
+    padding: 10px 10px 10px 10px;
 }
 
 .conversion-buttons {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    justify-content: center;   /* horizontal center */
-    align-items: center;       /* vertical alignment */
+    justify-content: center;   
+    align-items: center;       
+}
+
+.conversion-class{
+    border: solid white 1px;
+    border-radius: 20px 10px 10px 20px ;
 }
